@@ -22,6 +22,6 @@ if (data.id === 123) {
 }
 if (data.params && data.params.channel && data.params.message) {
     console.log(data.params.channel, data.params.message);
-    document.getElementById("rest_api").innerHTML =  '<br>'+' 価格:'+data.params.message[0].price + '<br>';
+    document.getElementById("rest_api").innerHTML =  '<br>'+' 価格:'+data.params.message[0].price + '<br>'+data.params.message[0].exec_date ;
 }
 });
