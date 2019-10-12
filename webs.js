@@ -93,7 +93,7 @@ window.onload = function() {
 	var ctx = document.getElementById('myChart').getContext('2d');
 	window.myChart = new Chart(ctx, config);
 };
-
+var ctx = document.getElementById('myChart').getContext('2d');
 //データ到着後更新
 var myChart = new Chart(ctx, config);
 function onReceive(buf) {
