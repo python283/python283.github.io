@@ -95,8 +95,8 @@ var config = {
         },
         layout: {
             padding: {
-                left: 10,
-                right: 10,
+                left: 0,
+                right: 30,
                 top: 10,
                 bottom: 10,
             }
