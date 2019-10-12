@@ -38,3 +38,5 @@ function clock()
 
 // 上記のclock関数を1000ミリ秒ごと(毎秒)に実行する
 setInterval(clock, 1000);
+
+

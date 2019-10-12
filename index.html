@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html>
         <head>
+                <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+                <script src="https://www.chartjs.org/chartjs-chart-financial/chartjs-chart-financial.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@1.8.0"></script>
+                
         <script src="./clock.js"></script>
         <script src="./webs.js"></script>
         </head>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
-
+<div>
+        <script type="text/javascript">
+            var buf = {};
+            buf['price'] = [];
+            buf['Bitfinex'] = [[], []];
+        </script>
+		<canvas id="myChart"></canvas>
+	</div>
      <!-- 時計枠 -->
      <div id="clock_frame">
             <!-- 日付部分 -->
             <span id="clock_date"></span>
             <!-- 時刻部分 -->
-            <span id="clock_time"></span>
+            <span id="clock_time"></span> 
             <span id="rest_api"></span>
         </div>
 </body>
