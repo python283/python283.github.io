@@ -38,7 +38,7 @@ if (data.params && data.params.channel && data.params.message) {
     
     onReceive(buf)
     
-    console.log(buf['price'].length);
+    //console.log(buf['price'].length);
 
     
 
