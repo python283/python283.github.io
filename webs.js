@@ -21,8 +21,8 @@ if (data.id === 123) {
     console.log("subscribed!");
 }
 if (data.params && data.params.channel && data.params.message) {
-
-    document.getElementById("rest_api").innerHTML =  '<br>'+' 価格:'+data.params.message[0].price + '<br>'+data.params.message[0].exec_date ;
+    console.log(data.params.message[0].price);
+    //document.getElementById("rest_api").innerHTML =  '<br>'+' 価格:'+data.params.message[0].price + '<br>'+data.params.message[0].exec_date ;
     
     if (buf['price'].length >1000){
         buf['price'] = buf['price'].slice(data.params.message.length,1000);
@@ -72,7 +72,7 @@ var config = {
                 
 				type: 'realtime',
 				realtime: {
-					duration: 120000,
+					duration: 100000,
 					refresh: 5000,
 					delay: 0,
                     //onRefresh:onRefresh,
@@ -114,9 +114,9 @@ function onReceive(buf) {
 	var data = myChart.data.datasets[0].data;
 	var last;
     
-	t -= t % 5000;
+	t -= t % 1000;
 	if (data.length === 0) {
-		data.push({ t: t - 5000, o: buf['price'][0].p-1, h: buf['price'][0].p+1, l: buf['price'][0].p-2, c: buf['price'][0].p });
+		data.push({ t: t - 1000, o: buf['price'][0].p-1, h: buf['price'][0].p+1, l: buf['price'][0].p-2, c: buf['price'][0].p });
 	}
 	last = data[data.length - 1];
 	if (t != last.t) {
