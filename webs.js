@@ -86,10 +86,10 @@ var config = {
         },
         layout: {
             padding: {
-                left: 30,
-                right: 30,
-                top: 30,
-                bottom: 30,
+                left: 0,
+                right: 0,
+                top: 10,
+                bottom: 10,
             }
         },
 		tooltips: {
