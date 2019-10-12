@@ -21,19 +21,26 @@ if (data.id === 123) {
     console.log("subscribed!");
 }
 if (data.params && data.params.channel && data.params.message) {
-    console.log(data.params.channel, data.params.message);
+
     document.getElementById("rest_api").innerHTML =  '<br>'+' 価格:'+data.params.message[0].price + '<br>'+data.params.message[0].exec_date ;
     
+    if (buf['price'].length >1000){
+        buf['price'] = buf['price'].slice(data.params.message.length,1000);
+    };
+
+    for (  var i = 0;  i < data.params.message.length;  i++  ) {
+        buf['price'].push({
+            id: data.params.message[i].id,
+            p: data.params.message[i].price,
+            d: data.params.message[i].exec_date
+        });
+    };
     
-    buf['price'].push({
-        id: data.params.message[0].id,
-        p: data.params.message[0].price
-    });
- 
+    
+    
+    console.log(buf['price'].length);
 
-
-   
-
+    
 
 
 
@@ -46,7 +53,7 @@ function onRefresh(chart) {
 	var t = Date.now();
 	var data = chart.data.datasets[0].data;
 	var last;
-
+    
 	t -= t % 5000;
 	if (data.length === 0) {
 		data.push({ t: t - 5000, o: buf['price'][0].p-1, h: buf['price'][0].p+1, l: buf['price'][0].p-2, c: buf['price'][0].p });
@@ -83,7 +90,7 @@ var config = {
 				type: 'realtime',
 				realtime: {
 					duration: 120000,
-					refresh: 500,
+					refresh: 50,
 					delay: 0,
 					onRefresh: onRefresh
 				}
