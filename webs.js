@@ -81,13 +81,13 @@ var config = {
                     
                 },
                 ticks:{
-                    fontSize:22
+                    fontSize:12
                 }
             }],
             
             yAxes:[{
                 ticks:{
-                    fontSize:22
+                    fontSize:12
                 }
 
             }]
