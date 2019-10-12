@@ -95,7 +95,7 @@ window.onload = function() {
 };
 
 //データ到着後更新
-
+//var myChart = new Chart(ctx, config);これいらない
 function onReceive(buf) {
     var t = Date.now();
 	var data = myChart.data.datasets[0].data;
