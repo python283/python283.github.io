@@ -67,6 +67,7 @@ var config = {
 			display: false,
 		},
 		scales: {
+        
 			xAxes: [{
                 
 				type: 'realtime',
@@ -77,15 +78,18 @@ var config = {
                     //onRefresh:onRefresh,
                     onReceive:onReceive
                     
-				}
+                },
+                ticks:{
+                    fontSize:12
+                }
 			}]
         },
         layout: {
             padding: {
-                left: 50,
-                right: 50,
-                top: 10,
-                bottom: 10,
+                left: 30,
+                right: 30,
+                top: 30,
+                bottom: 30,
             }
         },
 		tooltips: {
