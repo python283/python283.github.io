@@ -2,6 +2,11 @@
 <html>
         <head>
          <!-- chrt kit -->
+         <script type="text/javascript">
+            var buf = {};
+            buf['price'] = [];
+            buf['Bitfinex'] = [[], []];
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script src="https://www.chartjs.org/chartjs-chart-financial/chartjs-chart-financial.js"></script>
@@ -22,13 +27,11 @@
             </div>
         </div>
     </div>
-
-    <script type="text/javascript">
-        var buf = {};
-        buf['price'] = [];
-        buf['Bitfinex'] = [[], []];
-    </script>
-    <canvas id="myChart"></canvas>
+    <div class="mobile">
+            <canvas id="myChart"></canvas>
+    </div>
+    
+    
 
     
      <!-- 時計枠 -->
