@@ -123,9 +123,9 @@ function onReceive(buf) {
 	var data = myChart.data.datasets[0].data;
 	var last;
     
-	t -= t % 1000;
+	t -= t % 5000;
 	if (data.length === 0) {
-		data.push({ t: t - 1000, o: buf['price'][0].p-1, h: buf['price'][0].p+1, l: buf['price'][0].p-2, c: buf['price'][0].p });
+		data.push({ t: t - 5000, o: buf['price'][0].p-1, h: buf['price'][0].p+1, l: buf['price'][0].p-2, c: buf['price'][0].p });
 	}
 	last = data[data.length - 1];
 	if (t != last.t) {
