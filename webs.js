@@ -62,7 +62,7 @@ var config = {
         maintainAspectRatio: false,
 		title: {
 			display: true,
-            text: 'BTC/JPY chart ',
+            text: 'BTC/JPY 5s ',
             fontSize:20
 		},
 		legend: {
