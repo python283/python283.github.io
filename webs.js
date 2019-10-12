@@ -61,7 +61,8 @@ var config = {
 	options: {
 		title: {
 			display: true,
-			text: 'Bitcoin chart '
+            text: 'BTC/JPY chart ',
+            fontSize:20
 		},
 		legend: {
 			display: false,
@@ -80,14 +81,21 @@ var config = {
                     
                 },
                 ticks:{
-                    fontSize:12
+                    fontSize:22
                 }
-			}]
+            }],
+            
+            yAxes:[{
+                ticks:{
+                    fontSize:22
+                }
+
+            }]
         },
         layout: {
             padding: {
-                left: 0,
-                right: 0,
+                left: 10,
+                right: 10,
                 top: 10,
                 bottom: 10,
             }
