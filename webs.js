@@ -59,6 +59,7 @@ var config = {
 		}]
 	},
 	options: {
+        maintainAspectRatio: false,
 		title: {
 			display: true,
             text: 'BTC/JPY chart ',
@@ -70,7 +71,7 @@ var config = {
 		scales: {
         
 			xAxes: [{
-                
+                stacked: true,
 				type: 'realtime',
 				realtime: {
 					duration: 100000,
