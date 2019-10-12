@@ -68,6 +68,7 @@ var config = {
 		},
 		scales: {
 			xAxes: [{
+                
 				type: 'realtime',
 				realtime: {
 					duration: 120000,
@@ -78,7 +79,15 @@ var config = {
                     
 				}
 			}]
-		},
+        },
+        layout: {
+            padding: {
+                left: 50,
+                right: 50,
+                top: 10,
+                bottom: 10,
+            }
+        },
 		tooltips: {
 			position: 'nearest',
 			intersect: false
