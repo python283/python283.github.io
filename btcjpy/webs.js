@@ -74,7 +74,7 @@ var config = {
                 stacked: true,
 				type: 'realtime',
 				realtime: {
-					duration: 100000,
+					duration: 300000,
 					refresh: 5000,
 					delay: 0,
                     //onRefresh:onRefresh,
