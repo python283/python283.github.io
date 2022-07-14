@@ -1,7 +1,7 @@
 
 const channelName = "lightning_executions_FX_BTC_JPY";
 
-// note: reconnection handling needed.
+// note: reconnection handling needed.a
 const ws = new WebSocket("wss://ws.lightstream.bitflyer.com/json-rpc");
 
 ws.addEventListener("open", () => {
